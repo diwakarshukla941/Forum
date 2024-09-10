@@ -17,8 +17,12 @@
 </head>
 
 <body>
-    <?php include 'partials/_header.php';?>
     <?php include 'partials/_dbconnect.php';?>
+    <?php include 'partials/_header.php';?>
+ 
+
+
+
     <!-- carousel -->
     <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
@@ -74,9 +78,9 @@
                     <img src="https://plus.unsplash.com/premium_photo-1678565999332-1cde462f7b24?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         class="card-img-top" alt="datta">
                     <div class="card-body">
-                        <h5 class="card-title"><?php echo $name; ?></h5>
+                        <h5 class="card-title"><a href="./threadlist.php?catid=<?php echo $id;?>"><?php echo $name; ?></a></h5>
                         <p class="card-text"><?php echo substr($desc,0,200)."...";?></p>
-                        <a href="#" class="btn btn-primary">View Threads</a>
+                        <a href="./threadlist.php?catid=<?php echo $id;?>" class="btn btn-primary">View Threads</a>
                     </div>
                 </div>
             </div>
